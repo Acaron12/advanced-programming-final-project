@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link id="favicon" rel="icon" href="https://glitch.com/favicon.ico" type="image/x-icon" />
+
+    <script>
+      (function (apiKey) {
+        (function (p, e, n, d, o) {
+          var v, w, x, y, z;
+          o = p[d] = p[d] || {};
+          o._q = o._q || [];
+          v = ['initialize', 'identify', 'updateOptions', 'pageLoad', 'track'];
+          for (w = 0, x = v.length; w < x; ++w)
+            (function (m) {
+              o[m] =
+                o[m] ||
+                function () {
+                  o._q[m === v[0] ? 'unshift' : 'push']([m].concat([].slice.call(arguments, 0)));
+                };
+            })(v[w]);
+          y = e.createElement(n);
+          y.async = !0;
+          y.src = 'https://content.product.glitch.com/agent/static/' + apiKey + '/pendo.js';
+          z = e.getElementsByTagName(n)[0];
+          z.parentNode.insertBefore(y, z);
+        })(window, document, 'script', 'pendo');
+      })('211866e8-df03-4f24-7359-b49dd6253c1e');
+    </script>
+    <script>
+      (function () {
+        try {
+          var path = document.location.hash.split('?')[0].split('/');
+          var domain = path[1];
+
+          var NOT_DOMAINS = ['new-project', 'sign-in', 'facebook', 'sign-out', 'sign-up', 'email-login'];
+
+          if (domain === undefined || domain.length === 0 || path.length !== 2 || NOT_DOMAINS.includes(domain)) {
+            return;
+          }
+
+          new Image().src = `https://api.glitch.com/${domain}/preempt`;
+        } catch (e) {
+          console.error(e);
+        }
+      })();
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VB0TBS64TF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-VB0TBS64TF');
+    </script>
+
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+default-src
+  'self';
+connect-src
+  'self'
+  api.glitch.com api.glitch.development api.staging.glitch.com api.testing.staging.glitch.com api.glitch.localprojecthost:3031
+  wss://api.glitch.com wss://api.glitch.development wss://api.staging.glitch.com wss://glitch.development wss://api.testing.staging.glitch.com ws://api.glitch.localprojecthost:3031
+  cdn.glitch.com
+  www.google-analytics.com
+  cdn.glitch.me
+  cdn.glitch.global
+  cdn.staging.glitch.com
+  cdn.staging.glitch.me
+  cdn.staging.glitch.global
+  content.product.glitch.com
+  data.product.glitch.com
+  https://*.woopra.com
+  api.github.com
+  libraries.io
+  s3.amazonaws.com
+  https://securetoken.googleapis.com
+  https://www.googleapis.com
+  https://*.gstatic.com
+  https://settings.luckyorange.net
+  wss://visitors.live
+  wss://*.visitors.live https://pubsub.googleapis.com https://api.luckyorange.com
+  https://sentry.io
+  https://support-poster.glitch.me/post
+  https://api.amplitude.com
+  https://cdn.optimizely.com
+  https://*.algolianet.com https://*.algolia.net
+  https://api.digitalocean.com
+  https://app.pendo.io
+  https://pendo-io-static.storage.googleapis.com/
+  https://cdn.pendo.io
+  data:
+  blob:
+  ws://localhost:3000/
+  wss://localhost:3000/;
+font-src
+  cloud.webtype.com
+  cdn.glitch.com
+  cdn.glitch.me
+  cdn.glitch.global
+  cdn.staging.glitch.com
+  cdn.staging.glitch.me
+  cdn.staging.glitch.global
+  cloud.typenetwork.com;
+frame-src
+  https://*.glitch.me https://*.glitch.dev https://*.glitch.app https://*.glitch.staging.me https://*.glitch.development https://*.testing.staging.glitch.com http://*.glitch.localprojecthost:3031
+  https://*.glitch.dev https://*.glitch.staging.dev https://*.glitch.devdev http://*.danielluxemburg.glitch.lol
+  https://*.glitch.app https://*.glitch.staging.app https://*.edgecompute.app
+  https://accounts.google.com
+  https://content-firebase.googleapis.com/
+  https://www.google.com
+  https://*.ondigitalocean.app
+  https://app.pendo.io/
+  blob:
+  data:
+  'self';
+img-src
+  'self'
+  https://*
+  blob:
+  data:
+  https://d10lpsik1i8c69.cloudfront.net;
+media-src
+  'self'
+  https://*
+  blob:
+  data:;
+object-src
+  blob:
+  data:
+  'self';
+script-src
+  'self'
+  'wasm-unsafe-eval'
+  https://cdn.jsdelivr.net
+  https://apis.google.com
+  https://cdnjs.cloudflare.com
+  https://*.woopra.com
+  www.googletagmanager.com
+  'sha256-aROmP5KBVON8dHdF7kTobxNwhI67hJuBpk+jNh/jbM4='
+  'sha256-lIXJkTrfgeKmujhwsIkqzNbMkplZdPFm1ERXsf46uOw='
+  'sha256-To0Iwo79L42agXa29pvaAn64gM4rwT1BflbRPGdqcUg='
+  'sha256-IWN+DH0UXsSKPql06C66AvLM8/jMYbOe+wVRfPlzHDY='
+  http://www.luckyorange.com https://ssl.luckyorange.com https://d10lpsik1i8c69.cloudfront.net
+  https://unpkg.com/
+  https://www.google.com
+  https://www.gstatic.com
+  https://app.pendo.io
+  https://pendo-io-static.storage.googleapis.com/
+  https://cdn.pendo.io
+  https://cdn.amplitude.com;
+style-src
+  'self'
+  'unsafe-inline'
+  https://cloud.webtype.com
+  https://d10lpsik1i8c69.cloudfront.net
+  cdn.glitch.com
+  cdn.glitch.me
+  cdn.glitch.global
+  cdn.staging.glitch.com
+  cdn.staging.glitch.me
+  cdn.staging.glitch.global
+  cloud.typenetwork.com;
+worker-src
+  'self'
+  blob:
+"
+    />
+
+    <title data-rh="true">Glitch :･ﾟ✧</title>
+    <meta data-rh="true" name="description" content="Simple, powerful, free tools to create and use millions of apps." />
+    <meta data-rh="true" property="og:type" content="website" />
+    <meta data-rh="true" property="og:url" content="https://glitch.com/edit" />
+    <meta data-rh="true" property="og:title" content="Glitch Code Editor ･ﾟ✧" />
+    <meta data-rh="true" property="og:description" content="Simple, powerful, free tools to create and use millions of apps." />
+    <meta
+      data-rh="true"
+      property="og:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fglitch-social.png?v=1619667563754"
+    />
+    <meta data-rh="true" name="twitter:card" content="summary" />
+    <meta data-rh="true" name="twitter:site" content="@glitch" />
+    <meta data-rh="true" name="twitter:title" content="Glitch: The friendly community where everyone builds the web" />
+    <meta data-rh="true" name="twitter:description" content="Simple, powerful, free tools to create and use millions of apps." />
+    <meta
+      data-rh="true"
+      name="twitter:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fglitch-social.png?v=1619667563754"
+    />
+    <meta data-rh="true" name="twitter:url" content="https://glitch.com/edit" />
+    <noscript>
+      <title>Glitch</title>
+    </noscript>
+
+    <meta
+      name="description"
+      content="Combining automated deployment, instant hosting &amp; collaborative editing, Glitch gets you straight to coding so you can build full-stack web apps, fast"
+    />
+    <meta name="keywords" content="developer, javascript, nodejs, editor, ide, development, online, web, code editor, html, css" />
+
+    <!-- facebook open graph tags -->
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://glitch.com/edit" />
+    <meta name="og:title" content="Glitch" />
+    <meta
+      name="og:description"
+      content="Combining automated deployment, instant hosting &amp; collaborative editing, Glitch gets you straight to coding so you can build full-stack web apps, fast"
+    />
+    <meta name="og:image" content="https://glitch.com/edit/images/logos/glitch/social-card@2x.png" />
+    <!-- twitter card tags (stacks with og: tags) -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@glitch" />
+    <meta name="twitter:title" content="Glitch" />
+    <meta
+      name="twitter:description"
+      content="Combining automated deployment, instant hosting &amp; collaborative editing, Glitch gets you straight to coding so you can build full-stack web apps, fast"
+    />
+    <meta name="twitter:image" content="https://glitch.com/edit/images/logos/glitch/social-card@2x.png" />
+    <meta name="twitter:image:alt" content="Glitch Logo" />
+    <meta name="twitter:url" content="https://glitch.com" />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script type="module" crossorigin src="/edit/assets/index.23eb8231.js"></script>
+    <link rel="modulepreload" href="/edit/assets/design.53ed53ca.js">
+    <link rel="modulepreload" href="/edit/assets/codemirror.bff8dd02.js">
+    <link rel="modulepreload" href="/edit/assets/state.0d109f0a.js">
+    <link rel="modulepreload" href="/edit/assets/components.26cb8f17.js">
+    <link rel="modulepreload" href="/edit/assets/markdown.00274f23.js">
+    <link rel="modulepreload" href="/edit/assets/glitch.f737e327.js">
+    <link rel="stylesheet" href="/edit/assets/index.1f26f92a.css">
+  </head>
+  <body>
+    <noscript>
+      <h1>To use Glitch, please enable JavaScript</h1>
+    </noscript>
+
+    <div id="__react-overlay-container"></div>
+    <div id="__react-pop-root"></div>
+    <div id="__react-app-root"></div>
+
+    <div id="__recaptcha" style="width: 0px"></div>
+
+    <script src="https://unpkg.com/jshint@2.9.6/dist/jshint.js"></script>
+    <script src="https://unpkg.com/jsonlint@1.6.3/web/jsonlint.js"></script>
+    <script src="https://unpkg.com/stylelint-bundle@13.8.0/dist/stylelint-bundle.min.js"></script>
+    
+    <script src="https://apis.google.com/js/api.js"></script>
+  </body>
+</html>
